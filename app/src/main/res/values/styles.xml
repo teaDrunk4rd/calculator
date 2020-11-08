@@ -1,0 +1,35 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:textSelectHandle">@color/colorPrimary</item>
+        <item name="android:textSelectHandleLeft">@color/colorPrimary</item>
+        <item name="android:textSelectHandleRight">@color/colorPrimary</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ActionButton" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textSize">36sp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:minHeight">78dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_gravity">fill</item>
+        <item name="android:background">@drawable/action_button_selector</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="DefaultButton" parent="ActionButton">
+        <item name="android:textColor">@color/colorGrayDark</item>
+    </style>
+
+    <style name="ResultButton" parent="ActionButton">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@drawable/result_button_selector</item>
+    </style>
+</resources>

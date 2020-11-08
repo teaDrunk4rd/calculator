@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayLight"
+    android:theme="@android:style/Theme.NoTitleBar">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/margin_line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+    <EditText
+        android:id="@+id/user_input"
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+        android:background="@android:color/transparent"
+        android:importantForAutofill="no"
+        android:textAlignment="textEnd"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textColorHighlight="@color/colorPrimaryLight"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@id/margin_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor,TextFields" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:textAlignment="textEnd"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/margin_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_input" />
+
+    <Button android:text="⌫"
+        android:id="@+id/delete_button"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_margin="0dp"
+        android:minWidth="82dp"
+        android:textAlignment="center"
+        android:onClick="deleteSymbol"
+        android:textSize="24sp"
+        android:background="@drawable/button_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result" />
+
+    <GridLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_button"
+        android:columnCount="4"
+        android:rowCount="5">
+        <Button android:text="C"
+            android:onClick="clearInput"
+            android:textColor="@color/colorOrange"
+            style="@style/ActionButton" />
+        <Button android:text="("
+            android:onClick="onClick"
+            style="@style/ActionButton" /> <!--()-->
+        <Button android:text=")"
+            android:onClick="onClick"
+            style="@style/ActionButton" /> <!--%-->
+        <Button android:text="÷"
+            android:onClick="onClick"
+            style="@style/ActionButton" />
+        <Button android:text="7"
+            android:onClick="onClick"
+            style="@style/DefaultButton" />
+        <Button android:text="8"
+            android:onClick="onClick"
+            style="@style/DefaultButton" />
+        <Button android:text="9"
+            android:onClick="onClick"
+            style="@style/DefaultButton" />
+        <Button android:text="×"
+            android:onClick="onClick"
+            style="@style/ActionButton" />
+        <Button android:text="4"
+            android:onClick="onClick"
+            style="@style/DefaultButton" />
+        <Button android:text="5"
+            android:onClick="onClick"
+            style="@style/DefaultButton" />
+        <Button android:text="6"
+            android:onClick="onClick"
+            style="@style/DefaultButton" />
+        <Button android:text="-"
+            android:onClick="onClick"
+            style="@style/ActionButton" />
+        <Button android:text="1"
+            android:onClick="onClick"
+            style="@style/DefaultButton" />
+        <Button android:text="2"
+            android:onClick="onClick"
+            style="@style/DefaultButton" />
+        <Button android:text="3"
+            android:onClick="onClick"
+            style="@style/DefaultButton" />
+        <Button android:text="+"
+            android:onClick="onClick"
+            style="@style/ActionButton" />
+        <Button android:text="+/-"
+            android:onClick="onChangeSign"
+            style="@style/DefaultButton" />
+        <Button android:text="0"
+            android:onClick="onClick"
+            style="@style/DefaultButton" />
+        <Button android:text=","
+            android:onClick="onClick"
+            style="@style/DefaultButton" />
+        <Button android:text="="
+            android:onClick="getResult"
+            style="@style/ResultButton"/>
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
